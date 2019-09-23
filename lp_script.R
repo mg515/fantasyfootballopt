@@ -14,6 +14,7 @@ budget <- 100
 # optimization based on ict_index
 f.obj <- players %>% pull(ict_index)
 
+# add the constraints based on game rules
 f.con <- rbind(
             rep(1, n),                             # team in size of 15
             players$now_cost,                      # budget constraint
@@ -25,7 +26,7 @@ f.con <- rbind(
 f.dir <- c('<=', '<=', '==', '==', '==', '==')
 f.rhs <- c(15, budget * 10, 2, 5, 5, 3)
 
-# add 3-per-team constraints
+# add max-3-per-team constraints
 for (team in unique(players$team)){
 
     teamBool = as.numeric(players$team == team)

@@ -9,4 +9,4 @@ Data from: github.com/vaastav/Fantasy-Premier-League, so in order to clone the r
 # Optimal team for GW7 based on ict_index
 
 
-<img src="https://i.imgur.com/NDzfMCt.png" width="800">
+<img src="https://i.imgur.com/gJbopRr.png" width="800">

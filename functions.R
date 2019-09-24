@@ -2,7 +2,12 @@ require(Rglpk)
 require(dplyr)
 
 
-fantasy_lp <- function(player_table, f.obj, budget, team_size = c(2,5,5,3)){
+fantasy_lp <- function(
+    player_table,           # players data, must include team, element_type, now_cost columns
+    f.obj,                  # objective coefficients, must be same length as nrow(player_table)
+    budget=100,             # budget of the team
+    team_size = c(2,5,5,3)  # team size constraints (gk, def, mid, att)
+){
 
     # add the constraints based on game rules
     f.con <- rbind(

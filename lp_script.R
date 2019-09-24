@@ -1,7 +1,7 @@
 require(dplyr)
 require(magrittr)
 require(tibble)
-source("fantasy_lp.R")
+source("functions.R")
 
 
 players <- read.csv('Fantasy-Premier-League/data/2019-20/players_raw.csv', stringsAsFactors=FALSE) %>% as.tbl
